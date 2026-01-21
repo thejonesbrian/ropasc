@@ -61,6 +61,14 @@ function playGame() {
     }
     console.log(`Human: ${humanScore} VS Computer: ${computerScore}`);
 }
+const a = ["John", "Apple", "Peter"];
 
-playGame();
+a.push("Jacob");
 
+console.log(a[3]);
+//playGame();
+
+const selectId = document.querySelector("#word");
+const content = document.createElement("div");
+content.innerHTML = "<h3>The words that make up this content.</h3>";
+selectId.appendChild(content);
