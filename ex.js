@@ -25,7 +25,9 @@ body.appendChild(header);
 body.appendChild(div);
 
 const btn = document.querySelector("#btn");
-btn.onclick = () => alert("Hello!");
+btn.addEventListener("click", () => {
+    alert("Hi mate!");
+});
 
 
 // // adds the indicated style rule to the element in the div variable
