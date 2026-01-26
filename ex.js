@@ -24,9 +24,14 @@ body.appendChild(para);
 body.appendChild(header);
 body.appendChild(div);
 
-const btn = document.querySelector("#btn");
-btn.addEventListener("click", () => {
-    alert("Hi mate!");
-});
+const btn = document.querySelectorAll("button");
+
+btn.forEach((button) => {
+    button.addEventListener("click", () => {
+        alert("Hi mate!" + " " + button.id);
+    });
+})
+
+
 
 
