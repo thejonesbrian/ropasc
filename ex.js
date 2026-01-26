@@ -32,6 +32,17 @@ btn.forEach((button) => {
     });
 })
 
+//LIST
+const item = document.querySelectorAll("input");
+const ul = document.querySelector("ul");
+const accept = document.querySelector("button");
+
+accept.addEventListener("click", function (e) {
+    e.preventDefault();
+    const value = this.item;
+    item.textContent = "";
+})
+
 
 
 
