@@ -1,47 +1,60 @@
-const body = document.querySelector("body");
+// const body = document.querySelector("body");
 
-//paragraph 
-const para = document.createElement("p");
-para.style.color = "red";
-para.textContent = "Hey I'm red!";
+// //paragraph 
+// const para = document.createElement("p");
+// para.style.color = "red";
+// para.textContent = "Hey I'm red!";
 
-//header
-const header = document.createElement("h3");
-header.style.color = "blue";
-header.textContent = "I'm a blue h3!";
+// //header
+// const header = document.createElement("h3");
+// header.style.color = "blue";
+// header.textContent = "I'm a blue h3!";
 
-//div - cant use innerHtml
-const div = document.createElement("div");
-div.setAttribute("style", "border: 1px solid black; background: pink;");
-const paragraph = document.createElement("h1");
-paragraph.textContent = "Im in a div";
-const h = document.createElement("h1");
-h.textContent = "ME TOO!";
-div.appendChild(paragraph);
-div.appendChild(h);
+// //div - cant use innerHtml
+// const div = document.createElement("div");
+// div.setAttribute("style", "border: 1px solid black; background: pink;");
+// const paragraph = document.createElement("h1");
+// paragraph.textContent = "Im in a div";
+// const h = document.createElement("h1");
+// h.textContent = "ME TOO!";
+// div.appendChild(paragraph);
+// div.appendChild(h);
 
-body.appendChild(para);
-body.appendChild(header);
-body.appendChild(div);
+// body.appendChild(para);
+// body.appendChild(header);
+// body.appendChild(div);
 
-const btn = document.querySelectorAll("button");
+// const btn = document.querySelectorAll("button");
 
-btn.forEach((button) => {
-    button.addEventListener("click", () => {
-        alert("Hi mate!" + " " + button.id);
-    });
-})
+// btn.forEach((button) => {
+//     button.addEventListener("click", () => {
+//         alert("Hi mate!" + " " + button.id);
+//     });
+// })
 
 //LIST
-const item = document.querySelectorAll("input");
+const form = document.querySelector("form");
+const input = document.getElementById("item");
 const ul = document.querySelector("ul");
-const accept = document.querySelector("button");
 
-accept.addEventListener("click", function (e) {
+form.addEventListener("submit", function (e) {
     e.preventDefault();
-    const value = this.item;
-    item.textContent = "";
-})
+    const itemText = input.value;
+    //alert(itemText); 
+    input.value = "";
+
+    const li = document.createElement("li");
+    const span = document.createElement("span");
+    const button = document.createElement("button");
+
+    li.appendChild(span);
+    li.appendChild(button);
+    span.textContent = itemText;
+    button.textContent = "Delete";
+    ul.appendChild(li)
+});
+
+
 
 
 
