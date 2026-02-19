@@ -43,14 +43,21 @@ form.addEventListener("submit", function (e) {
     //alert(itemText); 
     input.value = "";
 
+    input.focus();
+
     const li = document.createElement("li");
     const span = document.createElement("span");
     const button = document.createElement("button");
 
-    li.appendChild(span);
-    li.appendChild(button);
     span.textContent = itemText;
     button.textContent = "Delete";
+
+    button.addEventListener("click", function () {
+        li.remove();
+    })
+
+    li.appendChild(span);
+    li.appendChild(button);
     ul.appendChild(li)
 });
 
